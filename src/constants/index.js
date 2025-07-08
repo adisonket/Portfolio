@@ -1,5 +1,5 @@
 import project1 from "../assets/project-1.jpg";
-// import project2 from "../assets/projects/project-2.jpg";
+import project2 from "../assets/project-2.jpg";
 
 
 export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. I have honed my skills in front-end technologies like React as well as back-end technologies like Node.js, MySQL and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
@@ -16,13 +16,13 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "Java Script", "PHP", "Laravel", "MySQL"],
   },
   
-  // {
-  //   title: "Portfolio Website",
-  //   image: project2,
-  //   description:
-  //     "A personal portfolio website showcasing projects, skills, and contact information.",
-  //   technologies: ["HTML", "CSS", "React", "Tailwind"],
-  // },
+  {
+    title: "Portfolio Website",
+    image: project2,
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["HTML", "CSS", "React", "Tailwind"],
+  },
 
 ];
 

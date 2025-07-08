@@ -1,15 +1,29 @@
 import React from "react";
-import { ABOUT_TEXT } from "../constants";
+import { ABOUT_TEXT, CONTACT } from "../constants/index";
 
 const About = () => {
   return (
     <section
       id='about'
-      className="py-20 px-8 text-white max-w-4xl mx-auto"
+      className="scroll-mt-28 py-20 px-8 flex justify-center items-center min-h-screen"
       data-aos="fade-up"
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-6">About Me</h2>
-      <p className="text-neutral-300 text-lg">{ABOUT_TEXT}</p>
+      <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg max-w-6xl w-full">
+        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">About Me</h2>
+        <p className="text-neutral-300 text-lg mb-6">{ABOUT_TEXT}</p>
+
+        <div className="mt-6 space-y-2">
+          <p className="text-neutral-300 text-lg">
+            <span className="font-semibold text-white">Email:</span> {CONTACT.email}
+          </p>
+          <p className="text-neutral-300 text-lg">
+            <span className="font-semibold text-white">Phone:</span> {CONTACT.phoneNo}
+          </p>
+          <p className="text-neutral-300 text-lg">
+            <span className="font-semibold text-white">Address:</span> {CONTACT.address}
+          </p>
+        </div>
+      </div>
     </section>
   );
 };
