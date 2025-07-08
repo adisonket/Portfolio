@@ -8,7 +8,7 @@ const Hero = () => {
     <section  id="home" className="flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 text-white">
       
       <div className="text-center md:text-left md:mr-12 flex-1 ml-10">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="text-6xl md:text-6xl font-bold mb-4">
           Sanket Adhikary
         </h1>
 
