@@ -5,9 +5,12 @@ import { HERO_CONTENT } from '../constants/index';
 
 const Hero = () => {
   return (
-    <section id="home" className="flex flex-col md:flex-row items-center justify-between min-h-screen px-4 md:px-12 py-12 text-white gap-10">
+    <section
+      id="home"
+      className="flex flex-col md:flex-row items-center justify-between py-12 md:py-20 px-4 md:px-8 gap-10"
+    >
       <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-10 shadow-lg w-full md:max-w-[55%]">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
           Sanket Adhikary
         </h1>
 
