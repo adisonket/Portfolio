@@ -5,10 +5,9 @@ import { HERO_CONTENT } from '../constants/index';
 
 const Hero = () => {
   return (
-    <section  id="home" className="flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 text-white ">
-      
-      <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg max-w-4xl">
-          <div className="text-center md:text-left md:mr-12 flex-1 ml-10">
+    <section id="home" className="flex flex-col md:flex-row items-center justify-center min-h-screen px-8 py-12 text-white">
+      <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8 shadow-lg max-w-4xl">
+        <div className="text-center md:text-left md:mr-12 flex-1 ml-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Sanket Adhikary
           </h1>
@@ -35,14 +34,14 @@ const Hero = () => {
       </div>
 
       <div className="mt-8 md:mt-0 flex-1 flex justify-center">
-        <img 
-          src={Photo} 
-          alt="Sanket Adhikary" 
+        <img
+          src={Photo}
+          alt="Sanket Adhikary"
           className="w-80 h-80 rounded-full object-cover border-4 border-white shadow-lg"
         />
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

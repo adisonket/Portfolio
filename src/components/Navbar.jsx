@@ -20,93 +20,108 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className='flex items-center justify-between px-8 py-6 text-white relative z-50'>
+    <>
+      <nav className='flex items-center justify-between px-8 py-6 text-white relative z-50'>
 
-      {/* Logo */}
-      <div className='flex flex-shrink-0 items-center'>
-        <h1 className='text-2xl font-bold'>Portfolio</h1>
-      </div>
+        <div className='flex flex-shrink-0 items-center'>
+          <h1 className='text-2xl font-bold'>Portfolio</h1>
+        </div>
 
-      {/* Desktop Nav */}
-      <ul className='hidden md:flex gap-8 text-lg font-medium'>
-        {navLinks.map((link, index) => (
-          <li key={index} className='group relative cursor-pointer'>
-            <Link
-              activeClass="text-fuchsia-400"
-              to={link.id}
-              spy={true}
-              smooth={true}
-              offset={-80}
-              duration={500}
-              className="block cursor-pointer"
-            >
-              {link.name}
-            </Link>
-            <span className='absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full'></span>
-          </li>
-        ))}
-      </ul>
-
-      {/* Mobile Icon */}
-      <div className='md:hidden'>
-        <button onClick={() => setMenuOpen(!menuOpen)} className='text-3xl'>
-          {menuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
-
-      {/* Social Links */}
-      <div className='hidden md:flex items-center gap-4 text-2xl'>
-        {socialLinks.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <a
-              key={index}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className='group relative cursor-pointer'
-            >
-              <Icon />
+        <ul className='hidden md:flex gap-8 text-lg font-medium'>
+          {navLinks.map((link, index) => (
+            <li key={index} className='group relative cursor-pointer'>
+              <Link
+                activeClass="text-fuchsia-400"
+                to={link.id}
+                spy={true}
+                smooth={true}
+                offset={-80}
+                duration={700}
+                className="block cursor-pointer"
+              >
+                {link.name}
+              </Link>
               <span className='absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full'></span>
-            </a>
-          );
-        })}
-      </div>
+            </li>
+          ))}
+        </ul>
 
-      {/* Mobile Menu */}
+        <div className='md:hidden'>
+          <button onClick={() => setMenuOpen(true)} className='text-3xl'>
+            <FaBars />
+          </button>
+        </div>
+
+        <div className='hidden md:flex items-center gap-4 text-2xl'>
+          {socialLinks.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className='group relative cursor-pointer'
+              >
+                <Icon />
+                <span className='absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full'></span>
+              </a>
+            );
+          })}
+        </div>
+      </nav>
+
       {menuOpen && (
-        <div className='absolute top-full left-0 w-full bg-neutral-800 py-6 flex flex-col items-center gap-6 md:hidden'>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
+
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-neutral-800 transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out z-50 p-6 flex flex-col`}
+      >
+        <button
+          onClick={() => setMenuOpen(false)}
+          className="self-end text-3xl mb-8 text-white"
+        >
+          <FaTimes />
+        </button>
+        <ul className="flex flex-col gap-6 text-lg text-white font-medium">
           {navLinks.map((link, index) => (
             <Link
               key={index}
               to={link.id}
               smooth={true}
               offset={-80}
-              duration={500}
-              className='text-lg font-medium'
+              duration={700}
+              className="cursor-pointer"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
-          <div className='flex gap-4 mt-4 text-2xl'>
-            {socialLinks.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={index}
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon />
-                </a>
-              );
-            })}
-          </div>
+        </ul>
+        <div className="flex gap-4 mt-8 text-2xl">
+          {socialLinks.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={index}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-fuchsia-400 transition-colors"
+              >
+                <Icon />
+              </a>
+            );
+          })}
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 };
 

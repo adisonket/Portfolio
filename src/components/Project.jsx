@@ -8,7 +8,7 @@ const Projects = () => {
       className="scroll-mt-28 py-20 px-8 flex justify-center items-center min-h-screen"
       data-aos="fade-up"
     >
-      <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 shadow-lg max-w-6xl w-full">
+      <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-8 shadow-lg max-w-6xl w-full">
         <h2 className="text-3xl md:text-5xl font-bold mb-10 text-white">
           Projects
         </h2>
