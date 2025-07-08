@@ -6,6 +6,7 @@ const Projects = () => {
     <section
       id="projects"
       className="py-20 px-8 text-white max-w-6xl mx-auto"
+      data-aos="fade-up"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-10">Projects</h2>
       <div className="grid gap-10 md:grid-cols-2">

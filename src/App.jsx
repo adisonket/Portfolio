@@ -4,8 +4,14 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Project'
 import Contact from './components/Contact'
+import BackToTop from './components/BackToTop'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 const App = () => {
+  useEffect(() => {AOS.init({duration: 1000,once: true,})}, []);
   return (
     <div className="relative min-h-screen w-full bg-neutral-900 overflow-hidden">
       <div className="absolute inset-0 bg-fuchsia-400 bg-[size:20px_20px] opacity-20 blur-[100px] z-0"></div>
@@ -15,6 +21,7 @@ const App = () => {
         <About />
         <Projects />
         <Contact />
+        <BackToTop />
       </div>
     </div>
   )

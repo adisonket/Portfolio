@@ -1,12 +1,13 @@
 import React from 'react'
-import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa"
+import { Link } from "react-scroll";
+import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
 
 const navLinks = [
-  { name: "Home", id: 'home' },
-  { name: "About", id: 'about' },
-  { name: "Projects", id: 'projects' },
-  { name: "Contact Me", id: 'contact' },
-]
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact Me", id: "contact" },
+];
 
 const Navbar = () => {
   return (
@@ -19,9 +20,17 @@ const Navbar = () => {
       <ul className='hidden md:flex gap-8 text-lg font-medium'>
         {navLinks.map((link, index) => (
           <li key={index} className='group relative cursor-pointer'>
-            <a href="{link.id  === ? '#' : `#${link.id}`}" className='block'>
+            <Link
+              activeClass="text-fuchsia-400"
+              to={link.id}
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="block cursor-pointer"
+            >
               {link.name}
-            </a>
+            </Link>
             <span className='absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full'></span>
           </li>
         ))}
@@ -30,7 +39,7 @@ const Navbar = () => {
       <div className='flex items-center gap-4 text-2xl'>
         {[FaLinkedin, FaFacebook, FaInstagram, FaGithub].map((Icon, index) => (
           <div key={index} className='group relative cursor-pointer'>
-            <Icon/>
+            <Icon />
             <span className='absolute left-0 -bottom-1 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full'></span>
           </div>
         ))}
@@ -39,4 +48,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
