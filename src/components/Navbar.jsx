@@ -21,13 +21,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex items-center justify-between px-8 py-6 text-white relative z-50'>
-
+      <nav className='flex items-center justify-between px-4 md:px-8 py-4 md:py-6 text-white relative z-50'>
         <div className='flex flex-shrink-0 items-center'>
-          <h1 className='text-2xl font-bold'>Portfolio</h1>
+          <h1 className='text-xl sm:text-2xl font-bold'>Portfolio</h1>
         </div>
 
-        <ul className='hidden md:flex gap-8 text-lg font-medium'>
+        <ul className='hidden md:flex gap-6 lg:gap-10 text-base md:text-lg font-medium'>
           {navLinks.map((link, index) => (
             <li key={index} className='group relative cursor-pointer'>
               <Link
@@ -47,12 +46,12 @@ const Navbar = () => {
         </ul>
 
         <div className='md:hidden'>
-          <button onClick={() => setMenuOpen(true)} className='text-3xl'>
+          <button onClick={() => setMenuOpen(true)} className='text-2xl'>
             <FaBars />
           </button>
         </div>
 
-        <div className='hidden md:flex items-center gap-4 text-2xl'>
+        <div className='hidden md:flex items-center gap-4 text-xl md:text-2xl'>
           {socialLinks.map((item, index) => {
             const Icon = item.icon;
             return (

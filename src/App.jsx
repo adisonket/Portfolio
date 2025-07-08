@@ -22,7 +22,7 @@ const App = () => {
         animate-gradient-xy
         opacity-30 blur-[120px] z-0"></div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 px-2 sm:px-4">
         <Navbar />
         <Hero />
         <About />
