@@ -15,3 +15,8 @@ html {
 body::-webkit-scrollbar {
   display: none;
 }
+
+
+section {
+  scroll-margin-top: 96px; 
+}
