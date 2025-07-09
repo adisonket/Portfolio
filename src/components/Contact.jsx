@@ -8,9 +8,9 @@ const Contact = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({ 
-      ...formData, 
-      [e.target.name]: e.target.value 
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
   };
 
@@ -28,15 +28,17 @@ const Contact = () => {
       data-aos="fade-up"
     >
       <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-10 shadow-lg max-w-4xl w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">
+          Contact Me
+        </h2>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6">
           <input
             type="text"
             name="name"
             value={formData.name}
             placeholder="Your Name"
             onChange={handleChange}
-            className="bg-neutral-800 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
+            className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             required
           />
           <input
@@ -45,7 +47,7 @@ const Contact = () => {
             value={formData.email}
             placeholder="Your Email"
             onChange={handleChange}
-            className="bg-neutral-800 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
+            className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             required
           />
           <textarea
@@ -53,7 +55,7 @@ const Contact = () => {
             value={formData.message}
             placeholder="Your Message"
             onChange={handleChange}
-            className="bg-neutral-800 p-3 rounded text-white focus:outline-none focus:ring-2 focus:ring-fuchsia-400 h-32"
+            className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400 h-32"
             required
           />
           <button
