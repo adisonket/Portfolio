@@ -1,43 +1,30 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert("Message sent!");
-    setFormData({ name: "", email: "", message: "" });
+    alert('Message sent!');
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <section
-      id="contact"
-      className="scroll-mt-28 py-12 md:py-20 px-4 md:px-8 flex justify-center items-center"
-      data-aos="fade-up"
-    >
-      <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-10 shadow-lg max-w-4xl w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">
-          Contact Me
-        </h2>
+    <section id="contact" className="scroll-mt-28 py-16 container mx-auto px-4" data-aos="fade-up">
+      <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center">Contact Me</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-6">
           <input
             type="text"
             name="name"
             value={formData.name}
-            placeholder="Your Name"
             onChange={handleChange}
+            placeholder="Your Name"
             className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             required
           />
@@ -45,19 +32,19 @@ const Contact = () => {
             type="email"
             name="email"
             value={formData.email}
-            placeholder="Your Email"
             onChange={handleChange}
+            placeholder="Your Email"
             className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
             required
           />
           <textarea
             name="message"
             value={formData.message}
-            placeholder="Your Message"
             onChange={handleChange}
+            placeholder="Your Message"
             className="bg-neutral-800 p-3 rounded text-white text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-fuchsia-400 h-32"
             required
-          />
+          ></textarea>
           <button
             type="submit"
             className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white font-bold py-3 rounded transition"

@@ -1,46 +1,50 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Photo from '../assets/Photo.jpg';
-import { HERO_CONTENT } from '../constants/index';
+import { HERO_CONTENT } from '../constants/index.js';
 
 const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-row flex-wrap items-center justify-between py-8 md:py-12 px-4 md:px-8 gap-8 mb-8 md:mb-16"
+      className="pt-28 md:pt-32 pb-16 flex flex-col md:flex-row items-center justify-between gap-8 container mx-auto px-4"
+      data-aos="fade-up"
     >
-      <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-4 sm:p-6 md:p-10 shadow-lg w-full md:max-w-[55%]">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-white">
-          Sanket Adhikary
-        </h1>
-
-        <div className="text-blue-400 text-lg sm:text-xl md:text-3xl font-semibold h-[50px] mb-6">
-          <TypeAnimation
-            sequence={[
-              'Web Developer', 1500,
-              'Programmer', 1500,
-              'Web Programming Enthusiast', 1500,
-            ]}
-            speed={50}
-            deletionSpeed={30}
-            wrapper="span"
-            cursor={true}
-            repeat={Infinity}
+      <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-8 md:p-12 shadow-xl  flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Sanket Adhikary
+          </h1>
+          <div className="text-fuchsia-400 text-xl sm:text-2xl md:text-3xl font-semibold mb-6">
+            <TypeAnimation
+              sequence={[
+                'Web Developer',
+                2000,
+                'Programmer',
+                2000,
+                'Web Programming Enthusiast',
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              deletionSpeed={30}
+              repeat={Infinity}
+              cursor={true}
+            />
+          </div>
+          <p className="text-neutral-300 text-sm sm:text-base md:text-lg max-w-xl mx-auto md:mx-0">
+            {HERO_CONTENT}
+          </p>
+        </div>
+        
+      </div>
+        <div className="flex-1 flex justify-center md:justify-end">
+          <img
+            src={Photo}
+            alt="Sanket Adhikary"
+            className="w-40 sm:w-56 md:w-72 rounded-full border-4 border-white shadow-xl object-cover"
           />
         </div>
-
-        <p className="text-sm sm:text-base md:text-lg text-neutral-300">
-          {HERO_CONTENT}
-        </p>
-      </div>
-
-      <div className="flex-1 flex justify-center">
-        <img
-          src={Photo}
-          alt="Sanket Adhikary"
-          className="w-28 sm:w-40 md:w-72 lg:w-80 rounded-full object-cover border-4 border-white shadow-lg"
-        />
-      </div>
     </section>
   );
 };

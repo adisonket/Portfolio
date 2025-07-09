@@ -1,48 +1,30 @@
-import React from "react";
-import { ABOUT_TEXT, CONTACT } from "../constants/index";
-import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
+import React from 'react';
+import { ABOUT_TEXT, CONTACT } from '../constants/index.js';
+import { FaLinkedin, FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const socialLinks = [
-  { icon: FaLinkedin, url: "https://www.linkedin.com/in/sanket-adhikary-020888253" },
-  { icon: FaFacebook, url: "https://www.facebook.com/share/1Aq6WdSY1b/?mibextid=wwXIfr" },
-  { icon: FaInstagram, url: "https://www.instagram.com/sanket_adhikary?igsh=enRjN205bzVmdmx6&utm_source=qr" },
-  { icon: FaGithub, url: "https://github.com/adisonket" },
+  { icon: FaLinkedin, url: 'https://www.linkedin.com/in/sanket-adhikary-020888253', color: '#0077B5' },
+  { icon: FaFacebook, url: 'https://www.facebook.com/share/1Aq6WdSY1b/?mibextid=wwXIfr', color: '#1877F2' },
+  { icon: FaInstagram, url: 'https://www.instagram.com/sanket_adhikary?igsh=enRjN205bzVmdmx6&utm_source=qr', color: '#E1306C' },
+  { icon: FaGithub, url: 'https://github.com/adisonket', color: '#ffffff' },
 ];
 
 const About = () => {
   return (
-    <section
-      id='about'
-      className="scroll-mt-28 py-12 md:py-20 px-4 md:px-8 flex justify-center items-center"
-      data-aos="fade-up"
-    >
-      <div className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-xl p-6 md:p-10 shadow-lg max-w-6xl w-full">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 text-white">About Me</h2>
-        <p className="text-neutral-300 text-base sm:text-lg mb-6">{ABOUT_TEXT}</p>
-
-        <div className="mt-6 space-y-2 text-sm sm:text-base">
-          <p className="text-neutral-300">
-            <span className="font-semibold text-white">Email:</span> {CONTACT.email}
-          </p>
-          <p className="text-neutral-300">
-            <span className="font-semibold text-white">Phone:</span> {CONTACT.phoneNo}
-          </p>
-          <p className="text-neutral-300">
-            <span className="font-semibold text-white">Address:</span> {CONTACT.address}
-          </p>
+    <section id="about" className="scroll-mt-28 py-16 container mx-auto px-4" data-aos="fade-up">
+      <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-8 md:p-12 shadow-xl max-w-5xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center">About Me</h2>
+        <p className="text-neutral-300 text-base sm:text-lg mb-6 text-center">{ABOUT_TEXT}</p>
+        <div className="flex flex-col sm:flex-row justify-center gap-8 text-sm sm:text-base text-neutral-300">
+          <p><span className="text-white font-semibold">Email:</span> {CONTACT.email}</p>
+          <p><span className="text-white font-semibold">Phone:</span> {CONTACT.phoneNo}</p>
+          <p><span className="text-white font-semibold">Address:</span> {CONTACT.address}</p>
         </div>
-
-        <div className="flex gap-4 mt-8 text-xl sm:text-2xl">
-          {socialLinks.map((item, index) => {
-            const Icon = item.icon;
+        <div className="flex justify-center gap-6 mt-8 text-2xl">
+          {socialLinks.map((link, i) => {
+            const Icon = link.icon;
             return (
-              <a
-                key={index}
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-fuchsia-400 transition-colors"
-              >
+              <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="transition-transform transform hover:scale-125" style={{ color: link.color }}>
                 <Icon />
               </a>
             );

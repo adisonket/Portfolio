@@ -1,17 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Inter", sans-serif;
-}
-
-html, body {
-  background-color: #171717; 
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 html {
@@ -19,27 +12,6 @@ html {
   scrollbar-width: none;
 }
 
-body {
-  -ms-overflow-style: none;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
-
-@keyframes gradient-xy {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.animate-gradient-xy {
-  animation: gradient-xy 15s ease infinite;
+body::-webkit-scrollbar {
+  display: none;
 }
