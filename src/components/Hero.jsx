@@ -12,7 +12,6 @@ const Hero = () => {
     >
       <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-center gap-8 w-full">
         
-        {/* LEFT: Text */}
         <div className="flex-1 w-full md:w-1/2 text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Sanket Adhikary
@@ -39,7 +38,6 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* RIGHT: Photo */}
         <div className="flex-1 w-full md:w-1/2 flex justify-center">
           <img
             src={Photo}

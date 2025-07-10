@@ -17,7 +17,6 @@ const Navbar = () => {
       <div className="relative container mx-auto px-4 py-4 flex justify-between items-center">
         <h1 className="text-xl sm:text-2xl font-bold">Sanket Adhikary</h1>
 
-        {/* Desktop Nav */}
         <nav className="hidden md:flex gap-10 justify-center mx-auto text-lg font-medium">
           {navLinks.map((link) => (
             <Link
@@ -33,7 +32,6 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Hamburger Icon */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-2xl"
@@ -41,7 +39,6 @@ const Navbar = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Sidebar */}
         <div
           className={`fixed top-0 right-0 h-full w-72 bg-white/10 backdrop-blur border-l border-white/10 transform ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
