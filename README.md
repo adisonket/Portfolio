@@ -24,7 +24,7 @@ Showcases my projects, skills, and a contact form.
 
 ## 📸 Screenshots
 
-![Screenshot](.assets/project-2.jpg)
+![Screenshot](/project-2.jpg)
 
 > Hero section, projects grid, and clean dark theme.
 
