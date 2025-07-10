@@ -61,7 +61,7 @@ const Navbar = () => {
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col items-start p-8 gap-4 mt-12 w-full">
+        <div className="flex flex-col items-start p-8 gap-4 mt-12 w-full bg-black">
           {navLinks.map((link) => (
             <Link
               key={link.id}
