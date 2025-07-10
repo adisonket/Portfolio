@@ -28,6 +28,6 @@ export const PROJECTS = [
 
 export const CONTACT = {
   email: "adisonket.99@gmail.com",
-  phoneNo: "+91 7044910010 ",
+  phoneNo: "+91 7439311969",
   address: "Singur, Hooghly, West Bengal, PIN - 712409 ",
 };
