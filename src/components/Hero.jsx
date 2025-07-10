@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 md:pt-32 pb-16 flex flex-col md:flex-row items-center justify-center gap-8 container mx-auto px-4"
+      className="pt-28 md:pt-32 pb-16 flex flex-col md:flex-row items-center justify-center gap-8 container mx-auto px-4 mt-8"
       data-aos="fade-up"
     >
       <div className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center justify-center gap-8 w-full">
