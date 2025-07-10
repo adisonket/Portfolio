@@ -22,10 +22,6 @@ Showcases my projects, skills, and a contact form.
 
 ---
 
-## 📸 Screenshots
-
-![Screenshot](/project-2.jpg)
-
 > Hero section, projects grid, and clean dark theme.
 
 ---
